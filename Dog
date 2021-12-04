@@ -1,0 +1,13 @@
+public class Dog {
+
+    private String name = "Fluffy";
+    private String breed = "Labradoodle";
+    private int age = 1;
+    private String color = "cream";
+
+    @Override
+    public String toString() {
+        return "My dog's name is " + name + ", he is a " + age +
+                " old " + breed + ", color: " + color;
+    }
+}
