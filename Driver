@@ -1,0 +1,102 @@
+public class StackTester {
+
+    public static void main(String[] args) {
+        Stack<String> stringStack = new ArrayStack<>();
+        Stack<Integer> numStack = new ArrayStack<>();
+        Stack<Dog> dogStack = new ArrayStack<>();
+
+        try {
+            // Testing Stack<Integer> numStack
+            System.out.println("Testing Stack<Integer> numStack\n");
+
+            numStack.push(0);
+            numStack.push(1);
+            numStack.push(2);
+            numStack.push(3);
+            numStack.push(4);
+            numStack.push(5);
+
+            System.out.println("Push 6 numbers: " + numStack);
+
+            numStack.length();
+            System.out.println("Result of lenght(): " +numStack);
+
+            numStack.pop();
+            System.out.println("Pop a number: " + numStack);
+
+            numStack.pop();
+            System.out.println("Pop a number: " + numStack);
+
+            numStack.pop();
+            System.out.println("Pop a number: " + numStack);
+
+            numStack.pop();
+            System.out.println("Pop a number: " + numStack);
+
+            numStack.pop();
+            System.out.println("Pop a number: " + numStack);
+
+            numStack.peek();
+            System.out.println("Peek: " + numStack.peek());
+
+            numStack.isEmpty();
+            System.out.println("Result of isEmpty(): " + numStack);
+
+
+            // Testing Stack<Dog> dogStack
+            System.out.println("\nTesting Stack<Dog> dogStack\n");
+
+            dogStack.push(new Dog());
+            System.out.println("Push Dog.java: " + dogStack);
+
+            dogStack.pop();
+            System.out.println("Pop Dog.java: " + dogStack);
+
+            dogStack.length();
+            System.out.println("Result of lenght(): " +dogStack);
+
+            dogStack.push(new Dog());
+            System.out.println("Push again: " + dogStack);
+
+            dogStack.isEmpty();
+            System.out.println("Result of isEmpty(): " + dogStack);
+
+            dogStack.peek();
+            System.out.println("Peek Dog.java: " + dogStack);
+
+
+
+            // Stack<String> stringStack
+            System.out.println("\nTesting Stack<String> stringStack\n");
+
+            stringStack.push("Delaware");
+            stringStack.push("State");
+            System.out.println("Push 2 words: " + stringStack);
+
+            stringStack.pop();
+            System.out.println("Pop a word: " + stringStack);
+
+
+            stringStack.peek();
+            System.out.println("Peek: " + stringStack);
+
+            stringStack.push("Technical");
+            System.out.println("Push a word: " + stringStack);
+
+            stringStack.isEmpty();
+            System.out.println("Result of isEmpty(): " + stringStack);
+
+            stringStack.push("Community");
+            System.out.println("Push a word: " + stringStack);
+
+            stringStack.push("College");
+            System.out.println("Push: " + stringStack);
+
+            stringStack.length();
+            System.out.println("Result of lenght(): " +stringStack);
+
+        } catch (CannotAddException e) {
+            System.out.println(e);
+        }
+    }
+}
